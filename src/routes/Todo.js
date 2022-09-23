@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
 //get all todo
 router.get("/", async (req, res) => {
   try {
-    const todo = await Todo.find();
+    const todo = await Todo.find().sort({ date: -1 });
     res.json(todo);
   } catch (error) {
     res.json({
