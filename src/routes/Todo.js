@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+const mongoose = require("mongoose");
 
 const Todo = require("../models/Todo");
 
 //Post todo
 router.post("/", async (req, res) => {
   const todo = new Todo({
+    _id: new mongoose.Types.ObjectId(),
     title: req.body.title,
     description: req.body.description,
   });
