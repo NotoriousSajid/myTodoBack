@@ -69,7 +69,7 @@ router.patch("/:id", async (req, res) => {
 //delete todo
 router.delete("/:id", async (req, res) => {
   try {
-    const todo = await Todo.remove({ _id: req.params.id });
+    const todo = await Todo.deleteOne({ _id: req.params.id });
     res.json(todo);
   } catch (error) {
     res.json({
