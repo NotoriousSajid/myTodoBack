@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const port = process.env.PORT || 3000;
 
 mongoose.connect(
-  "mongodb+srv://todo:8jk94l29@cluster0.z9ut5fq.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://todo:password@cluster0.z9ut5fq.mongodb.net/?retryWrites=true&w=majority"
 );
 
 mongoose.connection.on("error", (err) => {
